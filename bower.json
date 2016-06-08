@@ -1,0 +1,22 @@
+{
+  "name": "hashtag_analyzer",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ted Mathew dela Cruz <tedmdelacruz@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tedmdelacruz/hashtag-analyzer",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "bootstrap": "^3.3.6"
+  }
+}

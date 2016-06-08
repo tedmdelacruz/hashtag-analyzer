@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hashtag Analyzer</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'hashtag_analyzer/css/styles.css' %}"></link>
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    <script src="{% static 'hashtag_analyzer/js/jquery.min.js' %}"></script>
+    <script src="{% static 'hashtag_analyzer/js/bootstrap.min.js' %}"></script>
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

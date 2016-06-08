@@ -1,0 +1,8 @@
+bower_components/
+node_modules/
+hashtag_analyzer/static/hashtag_analyzer/css/*
+hashtag_analyzer/static/hashtag_analyzer/fonts/*
+hashtag_analyzer/static/hashtag_analyzer/js/*
+*.pyc
+*.sqlite3
+manage.py
