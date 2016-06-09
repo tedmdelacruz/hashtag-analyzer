@@ -1,8 +1,9 @@
 import { RETRIEVE_DATA, RECEIVE_DATA } from './actions'
 
 export function reducer(state = {
-    data: '',
-    isFetching: false
+    tweets: [],
+    isFetching: false,
+    isAnalyzing: false,
 }, action) {
     switch(action.type) {
         case RETRIEVE_DATA:
@@ -12,7 +13,7 @@ export function reducer(state = {
         case RECEIVE_DATA:
             return Object.assign({}, state, {
                 isFetching: false,
-                data: action.data
+                tweets: action.tweets
             })
         default:
             return state

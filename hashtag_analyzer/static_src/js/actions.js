@@ -8,21 +8,21 @@ function retrieveData() {
 }
 
 export const RECEIVE_DATA = 'RECEIVE_DATA'
-function receiveData(data) {
+function receiveData(tweets) {
     return {
         type: RECEIVE_DATA,
-        data
+        tweets 
     }
 }
 
 export const FETCH_DATA = 'FETCH_DATA'
-export function fetchData() {
+export function fetchData(query) {
     return dispatch => {
-        // dispatch(retrieveData())
-        // return axios.get('/get')
-        //     .then(response => {
-        //         dispatch(receiveData(response.data))
-        //     })
+        dispatch(retrieveData())
+        return axios.get(`/get_tweets/${query}`)
+            .then(response => {
+                dispatch(receiveData(response.data.statuses))
+            })
     }
 }
 

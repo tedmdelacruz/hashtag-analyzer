@@ -1,0 +1,61 @@
+$base-unit: 40px;
+
+$grey: #444;
+$grey-light: lighten($grey, 60%);
+
+$primary-color: #26343F;
+$secondary-color: #1a242d;
+
+$bg-color: $primary-color;
+$fg-color: #fff;
+$accent-color: #00b299;
+$secondary-accent-color: #F2784B;
+
+html,
+body,
+body > .row,
+.app-panel, 
+.app-panel-inner {
+    height: 100%;
+}
+
+body {
+    background-color: $bg-color;
+    color: $fg-color;
+}
+
+.app-panel {
+
+    .app-panel-heading {
+        color: $accent-color;
+        border-right: 3px solid $accent-color;
+        padding: $base-unit / 2;
+
+        hr {
+            border-color: $accent-color;
+            margin: $base-unit / 4 0;
+        }
+
+        h3 {
+            margin: 0;
+        }
+    }
+
+    .app-panel-body {
+        color: $fg-color; 
+        border-right: 3px solid $secondary-accent-color;
+    }
+}
+
+.tweet-list {
+    overflow-y: scroll;
+}
+.tweet {
+    padding: $base-unit / 2;
+}
+
+.app-panel-left {
+    // border-right: 1px solid $accent-color;
+    background-color: $secondary-color; 
+    padding-right: 0;
+}
