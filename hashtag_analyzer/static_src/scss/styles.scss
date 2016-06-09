@@ -16,7 +16,7 @@ body,
 body > .row,
 .app-panel, 
 .app-panel-inner {
-    height: 100%;
+    // height: inherit;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 
     .app-panel-heading {
         color: $accent-color;
-        border-right: 3px solid $accent-color;
+        border-bottom: 4px solid $bg-color;
         padding: $base-unit / 2;
 
         hr {
@@ -43,7 +43,6 @@ body {
 
     .app-panel-body {
         color: $fg-color; 
-        border-right: 3px solid $secondary-accent-color;
     }
 }
 
@@ -52,6 +51,7 @@ body {
 }
 .tweet {
     padding: $base-unit / 2;
+    border-bottom: 4px solid $bg-color;
 }
 
 .app-panel-left {
