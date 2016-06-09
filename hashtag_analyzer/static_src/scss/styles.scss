@@ -49,13 +49,24 @@ body {
 .tweet-list {
     overflow-y: scroll;
 }
+
 .tweet {
     padding: $base-unit / 2;
     border-bottom: 4px solid $bg-color;
+}
+
+.spinner {
+    padding: $base-unit;
+    text-align: center
 }
 
 .app-panel-left {
     // border-right: 1px solid $accent-color;
     background-color: $secondary-color; 
     padding-right: 0;
+
+    .spinner {
+        background-color: $bg-color;
+        color: $accent-color;
+    }
 }

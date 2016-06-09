@@ -67,6 +67,12 @@ gulp.task('copy', function () {
     gulp.src(paths.bower + '/bootstrap/dist/fonts/*')
         .pipe(gulp.dest(paths.dest + '/fonts'));
 
+    gulp.src(paths.bower + '/font-awesome/css/font-awesome.min.css')
+        .pipe(gulp.dest(paths.dest + '/css'));
+
+    gulp.src(paths.bower + '/font-awesome/fonts/*')
+        .pipe(gulp.dest(paths.dest + '/fonts'));
+
     gulp.src(paths.bower + '/bootstrap/dist/js/bootstrap.min.js')
         .pipe(gulp.dest(paths.dest + '/js'));
     gulp.src(paths.bower + '/jquery/dist/jquery.min.js')
