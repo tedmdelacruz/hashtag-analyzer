@@ -6,3 +6,4 @@ hashtag_analyzer/static/hashtag_analyzer/js/*
 *.pyc
 *.sqlite3
 manage.py
+config.py

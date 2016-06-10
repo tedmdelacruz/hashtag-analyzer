@@ -13,8 +13,8 @@ export const TwitterFeed = connect(
     }
 )(components.TwitterFeed)
 
-export const AnalysisContainer = connect(
+export const Analysis = connect(
     function mapStateToProps(state) {
         return state
     }
-)(components.AnalysisContainer)
+)(components.Analysis)

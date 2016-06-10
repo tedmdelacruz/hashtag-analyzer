@@ -1,5 +1,5 @@
 export * from './TwitterFeed'
-export * from './AnalysisContainer'
+export * from './Analysis'
 export * from './Tweet'
 export * from './Spinner'
 

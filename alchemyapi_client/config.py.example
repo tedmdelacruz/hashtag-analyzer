@@ -1,0 +1,3 @@
+BASE_URL = 'http://gateway-a.watsonplatform.net/'
+
+API_KEY = 'xxx'

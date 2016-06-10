@@ -1,8 +1,9 @@
 import { REQUEST_TWITTER_API, RECEIVE_TWITTER_API, 
-    REQUEST_ALCHEMY_API } from './actions'
+    REQUEST_ALCHEMY_API, RECEIVE_ALCHEMY_API } from './actions'
 
 export function reducer(state = {
     data: [],
+    analysisResults: null,
     isFetching: false,
     isAnalyzing: false,
 }, action) {
@@ -20,6 +21,11 @@ export function reducer(state = {
             return Object.assign({}, state, {
                 isAnalyzing: true,
                 data: action.data
+            })
+        case RECEIVE_ALCHEMY_API:
+            return Object.assign({}, state, {
+                isAnalyzing: false,
+                analysisResults: action.response
             })
         default:
             return state

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { Tweet, Spinner } from './'
 
 export class TwitterFeed extends Component {
-
     componentWillMount() {
         const { fetchData, query } = this.props
         fetchData(query)

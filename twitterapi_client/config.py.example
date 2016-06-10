@@ -1,0 +1,12 @@
+"""
+Twitter API settings configuration
+"""
+
+BASE_URL = 'https://api.twitter.com/'
+
+APP_NAME = 'hashtag-analyzer'
+API_KEY = 'xxx'
+API_SECRET = 'xxx'
+
+# FIXME Cache this in Session perhaps?
+BEARER_TOKEN = 'xxx'

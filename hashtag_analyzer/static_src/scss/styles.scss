@@ -28,7 +28,7 @@ body {
 
     .app-panel-heading {
         color: $accent-color;
-        border-bottom: 4px solid $bg-color;
+        border: 10px solid $bg-color;
         padding: $base-unit / 2;
 
         hr {
@@ -52,12 +52,19 @@ body {
 
 .tweet {
     padding: $base-unit / 2;
-    border-bottom: 4px solid $bg-color;
+    border-width: 0 10px 10px 10px;
+    border-style: solid;
+    border-color: $bg-color;
 }
 
 .spinner {
+    font-size: 1.5em;
     padding: $base-unit;
-    text-align: center
+    text-align: center;
+
+    .fa {
+        font-size: 2em;
+    }
 }
 
 .app-panel-left {
@@ -74,7 +81,15 @@ body {
 .app-panel-right {
 
     .spinner {
-        position: relative;
-        top: 40%;
+        margin-top: $base-unit * 2;
+    }
+}
+
+.analysis-results {
+    text-align: center;
+    margin-top: $base-unit * 4;
+
+    h2 {
+        font-size: 8em;
     }
 }
