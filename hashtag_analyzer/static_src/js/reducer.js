@@ -1,19 +1,25 @@
-import { RETRIEVE_DATA, RECEIVE_DATA } from './actions'
+import { REQUEST_TWITTER_API, RECEIVE_TWITTER_API, 
+    REQUEST_ALCHEMY_API } from './actions'
 
 export function reducer(state = {
-    tweets: [],
+    data: [],
     isFetching: false,
     isAnalyzing: false,
 }, action) {
     switch(action.type) {
-        case RETRIEVE_DATA:
+        case REQUEST_TWITTER_API:
             return Object.assign({}, state, {
                 isFetching: true
             })
-        case RECEIVE_DATA:
+        case RECEIVE_TWITTER_API:
             return Object.assign({}, state, {
                 isFetching: false,
-                tweets: action.tweets
+                data: action.data
+            })
+        case REQUEST_ALCHEMY_API :
+            return Object.assign({}, state, {
+                isAnalyzing: true,
+                data: action.data
             })
         default:
             return state

@@ -1,15 +1,5 @@
 import React, { Component } from 'react'
-import { Tweet } from './Tweet'
-
-class Spinner extends Component {
-    render() {
-        return (
-            <div className="spinner">
-                <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
-            </div>
-        )
-    }
-}
+import { Tweet, Spinner } from './'
 
 export class TwitterFeed extends Component {
 
@@ -19,7 +9,7 @@ export class TwitterFeed extends Component {
     }
 
     render() {
-        const { tweets, query, isFetching, isAnalyzing } = this.props
+        const { data, query, isFetching } = this.props
 
         return (
             <div className="app-panel-inner">
@@ -29,11 +19,11 @@ export class TwitterFeed extends Component {
                     <h4>#{ query }</h4>
                 </div>
 
-                { isFetching ? <Spinner /> : null }
+                { isFetching ? <Spinner type="notch" msg="Fetching tweets..." /> : null }
 
                 <div className="app-panel-body">
                     <div className="tweet-list">
-                        { tweets.map((tweet, index) => {
+                        { data.map((tweet, index) => {
                             return <Tweet data={ tweet } key={ index } />
                         }) }
                     </div>

@@ -70,3 +70,11 @@ body {
         color: $accent-color;
     }
 }
+
+.app-panel-right {
+
+    .spinner {
+        position: relative;
+        top: 40%;
+    }
+}

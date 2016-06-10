@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
-import { fetchData } from './actions'
-import * as components from './components/TwitterFeed'
+import { fetchTwitterAPI } from './actions'
+import * as components from './components'
 
 export const TwitterFeed = connect(
     function mapStateToProps(state) {
@@ -8,7 +8,13 @@ export const TwitterFeed = connect(
     },
     function mapDispachToProps(dispatch) {
         return {
-            fetchData: (query) => dispatch(fetchData(query))
+            fetchData: (query) => dispatch(fetchTwitterAPI(query))
         }
     }
 )(components.TwitterFeed)
+
+export const AnalysisContainer = connect(
+    function mapStateToProps(state) {
+        return state
+    }
+)(components.AnalysisContainer)

@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 
 import { reducer } from './reducer'
-import { TwitterFeed } from './containers'
+import { TwitterFeed, AnalysisContainer } from './containers'
 
 const store = createStore(
     reducer,
@@ -13,6 +13,7 @@ const store = createStore(
 )
 
 const TwitterFeedEl = document.getElementById('twitter-feed')
+const AnalysisContainerEl = document.getElementById('analysis-container')
 const query = TwitterFeedEl.dataset.query
 
 render(
@@ -20,4 +21,11 @@ render(
         <TwitterFeed query={ query }/>
     </Provider>,
     TwitterFeedEl
-);
+)
+
+render(
+    <Provider store={ store }>
+        <AnalysisContainer/>
+    </Provider>,
+    AnalysisContainerEl
+)
