@@ -7,3 +7,4 @@ hashtag_analyzer/static/hashtag_analyzer/js/*
 *.sqlite3
 manage.py
 config.py
+venv/

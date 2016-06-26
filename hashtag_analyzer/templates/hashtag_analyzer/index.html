@@ -8,10 +8,25 @@
                 <h1>Hashtag Sentiment Analyzer</h1>
                 <hr>
                 <p>Analyzes Twitter hashtags and passes the tweets through Alchemy API for sentiment analysis</p>
+                <form id="query-form" class="form-inline">
+                    <input type="text" name="query" placeholder="#hashtag" class="form-control input-lg">
+                    <button type="submit" class="btn btn-info btn-lg">Analyze</button>
+                </form>
             </div>
         </div>
     </div>
 
 {% endblock %}
 
-{% block scripts %}{% endblock %}
+{% block scripts %}
+<script>
+    (function($) {
+
+        $("#query-form").submit(function (e) {
+            e.preventDefault();
+            window.location = '/analyze/' + $("input", this).val();
+        });
+
+    })(jQuery);
+</script>
+{% endblock %}

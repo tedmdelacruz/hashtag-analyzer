@@ -7,9 +7,15 @@ export class Analysis extends Component {
         let results = null
 
         if (analysisResults) {
-            results = analysisResults.docSentiment.type === 'positive'
-                ? <h2 className="text-primary">Good</h2>
-                : <h2 className="text-danger">Bad</h2>
+            results = (
+                <div>
+                    <h2 className="text-warning">Joy: { analysisResults.docEmotions.joy }</h2>
+                    <h2 className="text-primary">Sadness: { analysisResults.docEmotions.sadness }</h2>
+                    <h2 className="text-danger">Anger: { analysisResults.docEmotions.anger }</h2>
+                    <h2 className="text-muted">Fear: { analysisResults.docEmotions.fear }</h2>
+                    <h2 className="text-success">Disgust: { analysisResults.docEmotions.disgust }</h2>
+                </div>
+            )
         }
 
         return (

@@ -7,7 +7,7 @@ def analyze(text):
         'outputMode': 'json',
     }
 
-    response = requests.post(config.BASE_URL + '/calls/text/TextGetTextSentiment',
+    response = requests.post(config.BASE_URL + '/calls/text/TextGetEmotion',
         data=data)
 
     return response
